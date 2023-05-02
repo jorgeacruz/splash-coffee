@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import Balance from '../../components/Balance';
 import Movements from '../../components/Movements';
 import Actions from '../../components/Actions';
+import { MotiText, MotiView } from 'moti';
 
 const list = [
   {
@@ -68,8 +69,36 @@ export default function Home() {
     <Header name="Lucas Silva"/>
     <Balance saldo='12.000,00'gastos='4.000,00'/>
     <Actions/>
-    <Text style={styles.title}>Ultimas Movimentações</Text>
-
+    <MotiText style={styles.title}
+    from={{
+      translateX:-300,
+      opacity:0
+    }}
+    animate={{
+      translateX:0,
+      opacity:1
+    }}
+    transition={{
+      type:'timing',
+      duration:800,
+      delay:500
+    }}
+    >Ultimas Movimentações</MotiText>
+    <MotiView
+    from={{
+      translateY:1000,
+      opacity:0
+    }}
+    animate={{
+      translateY:0,
+      opacity:1
+    }}
+    transition={{
+      type:'timing',
+      duration:900,
+      delay:600
+    }}
+    >
     <FlatList
       style={styles.list}
       data={list}
@@ -77,7 +106,7 @@ export default function Home() {
       showsVerticalScrollIndicator={false}
       renderItem={ ({ item }) => <Movements data={item} /> }
     />
-    
+    </MotiView>
    </View>
   );
 }
