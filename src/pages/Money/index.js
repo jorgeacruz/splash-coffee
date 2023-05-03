@@ -1,18 +1,17 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { MotiText, MotiView } from 'moti';
+import Header from '../../components/Header';
+
 
 export default function Money() {
  return (
-   <View style={styles.container}>
-    <Text>Money</Text>
-   </View>
+    <Header/>
   );
 }
 
 const styles = StyleSheet.create({
     container:{
-        flex:1,
-        alignItems:'center',
-        justifyContent:'center'
+        
     }
 })

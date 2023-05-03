@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StatusBar, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, StatusBar, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { MotiView, MotiText } from 'moti';
 

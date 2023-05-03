@@ -1,4 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home from '../src/pages/Home'
 import Money from '../src/pages/Money'
@@ -47,4 +48,16 @@ export function Routes(){
       />
     </Tab.Navigator>
   )
+}
+
+const Stack = createNativeStackNavigator();
+
+function RouteStack() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
