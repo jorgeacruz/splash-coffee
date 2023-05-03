@@ -54,15 +54,16 @@ const list = [
     label:'Compra Brigadeiro',
     value:'30,00',
     date:'02/06/2022',
-    type:1 //saida
+    type:0 //saida
   },
   {
     id:8,
     label:'Compra Brigadeiro',
     value:'30,00',
     date:'02/06/2022',
-    type:1 //saida
-  }]
+    type:0 //saida
+  }
+ ]
 export default function Home() {
  return (
    <View style={styles.container}>
