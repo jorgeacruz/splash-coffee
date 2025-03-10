@@ -1,10 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
+import { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Splash from './src/screens/splash';
+
+import  { Home } from './src/screens/Home';
+import  Splash  from './src/screens/splash';
 
 export default function App() {
+
+  const [splashComplete, setSplashComplete] = useState(false);
+
   return (
-    <Splash/>
+    splashComplete ? <Home/> :
+    <Splash onComplete={setSplashComplete}/>
   );
 }
 
