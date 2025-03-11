@@ -32,7 +32,7 @@ export default function Splash({ onComplete }: Props) {
       // preencher tela toda
       style={StyleSheet.absoluteFill}
       resizeMode={ResizeMode.COVER}
-      source={require('../videos/ballet.mp4')}
+      source={require('../videos/splash.mp4')}
       isLooping={false}
       // responsavel por verificar estado do video
       onPlaybackStatusUpdate={onPlaybackStatusUpdate}
