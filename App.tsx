@@ -9,8 +9,9 @@ export default function App() {
   const [splashComplete, setSplashComplete] = useState(false);
 
   return (
-    splashComplete ? <Home/> :
-    <Splash onComplete={setSplashComplete}/>
+    splashComplete 
+    ? <Home/> 
+    : <Splash onComplete={setSplashComplete}/>
   );
 }
 
